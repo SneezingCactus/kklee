@@ -112,6 +112,15 @@ type
     # Fixture IDs of shapes on platform
     fx*: seq[int]
     cf*: MapBodyCf
+    fz*: MapBodyFz
+  # Force zone props
+  MapBodyFz* = ref object
+    # x, y
+    x*, y*: float
+    # enabled
+    on*: bool
+    # affect discs, platforms, arrows
+    d*, p*, a*: bool
   # Constant force
   MapBodyCf* = ref object
     # x, y, torque

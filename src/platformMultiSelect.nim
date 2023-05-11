@@ -210,6 +210,12 @@ https://github.com/kklkkj/kklee/blob/master/guide.md#mathematical-expression-eva
     ("Absolute", true), ("Relative", false)
   ])
   floatProp("Apply torque", b.cf.ct)
+  boolProp("Force zone", b.fz.on)
+  floatProp("Force zone x", b.fz.x)
+  floatProp("Force zone y", b.fz.y)
+  boolProp("Push players", b.fz.d)
+  boolProp("Push platforms", b.fz.p)
+  boolProp("Push arrows", b.fz.a)
 
   bonkButton "Apply", proc =
     removeDeletedBodies()
