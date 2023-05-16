@@ -305,19 +305,17 @@ this\\[.{10,20}\\]=false;.{0,11})\\$\\(document\\)\\[.{10,20}\\]\\(.{10,20},\
         j8D[1]["style"]["display"] = "block";
     }
   */
-  replace(
+  replace( // i made this one worse sorry kklekej
     new RegExp(
-      "((?<=this\\[.{10,25}\\]=function\\(.{3,4},.{3,4}\
-,.{3,4},.{3,4}\\)\\{).{50,250}(.{3,4}\\[.{0,25}\\]=.{3,4}\\[.{0,30}\\];){3}\
-.{0,75}.{3,4}\\(false\\).{0,75};\\};)",
-      "g"
+      "(?<=this\\[.{10,25}\\]=function\\(.{3,4},.{3,4}\
+,.{3,4},.{3,4}\\)\\{)(.{50,250})(.{3,4}\\[.{0,25}\\]=.{3,4}\\[.{0,30}\\];){3}(.{0,1000}?;)this"
     ),
     `window.kklee.showColourPickerArguments=[...arguments];\
 document.getElementById("kkleeColourInput").value="#"+arguments[0]\
-.toString(16).padStart(6,"0");$1;\
+.toString(16).padStart(6,"0");$1$2$3;\
 let Kscpa=this["showColorPicker"];window.kklee.setColourPickerColour=\
 function(c){Kscpa(c,...window.kklee.showColourPickerArguments.slice(1));};\
-window.kklee.bonkShowColorPicker=Kscpa;`
+window.kklee.bonkShowColorPicker=Kscpa;this`
   );
   // Map editor preview test time between each frame
   window.kklee.editorPreviewTimeMs = 30;
